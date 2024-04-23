@@ -102,7 +102,7 @@ def render_app():
             st.markdown(message["content"])
             
              # Accept user input
-    if prompt := st.chat_input("Type your question here to talk to LLaMA3"):
+    if prompt := st.chat_input("Message LLaMA 3x...."):
         # Add user message to chat history
         st.session_state.chat_dialogue.append({"role": "user", "content": prompt})
         # Display user message in chat message container
