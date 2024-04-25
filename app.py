@@ -1,11 +1,9 @@
 import streamlit as st
 import os
-from dotenv import load_dotenv
-load_dotenv()
 from groq import Groq
 
 # Load environment variables
-GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
+GROQ_API_KEY = #"Enter api key"
 
 PRE_PROMPT = "You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as Assistant."
 
