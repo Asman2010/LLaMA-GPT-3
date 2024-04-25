@@ -15,7 +15,7 @@ if not GROQ_API_KEY:
 client = Groq(api_key=GROQ_API_KEY)
 
 # Set up Streamlit app
-st.set_page_config(page_title="LLaMA3 Chatbot", page_icon="🦙", layout="wide")
+st.set_page_config(page_title="LLaMA GPT - 3", page_icon="🦙", layout="wide")
 
 def render_app():
 
