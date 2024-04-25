@@ -1,8 +1,10 @@
-# Shout out to a16z-infra! Our LLaMA GPT-3 model is forked from https://github.com/a16z-infra/llama2-chatbot. We've taken these incredible projects and added our own special sauce to make them even more powerful and user-friendly! 🧪✨
-
 # LLaMA-GPT-3
 
 A Streamlit application that allows users to chat with the LLaMA3 language model using the Groq API.
+
+# Project Credits
+
+Shout out to a16z-infra! Our LLaMA GPT-3 model is forked from https://github.com/a16z-infra/llama2-chatbot. We've taken these incredible projects and added our own special sauce to make them even more powerful and user-friendly! 🧪✨
 
 ## Features
 
