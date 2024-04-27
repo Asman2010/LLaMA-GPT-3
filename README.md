@@ -42,6 +42,10 @@ cd llama3-chatbot
 pip install streamlit groq
 ```
 
+4. Create Groq's API to key, to create one do the following
+Go to groq.com and log in with your email > Click Login and choose a sign-in method > click and navigate to groqcloud > Click on 'API Keys' option and Create one
+> Name the API key > copy the api key > click Submit > paste the api key in the code 
+
 ## Usage
 
 1. Run the Streamlit application:
