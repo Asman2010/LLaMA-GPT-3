@@ -14,7 +14,7 @@ Shout out to a16z-infra! Our LLaMA GPT-3 model is forked from https://github.com
 - Clear chat history button
 
 ## Screenshot
-![image](https://github.com/Asman2010/LLaMA-GPT-3/assets/142419243/abaee800-4eab-4a94-8990-73a4f75de0b8)
+![image](https://github.com/Asman2010/LLaMA-GPT-3/assets/142419243/8f4313bb-f2bc-43bd-94ee-98f25eb605fb)
 
 ## Requirements
 
@@ -27,13 +27,13 @@ Shout out to a16z-infra! Our LLaMA GPT-3 model is forked from https://github.com
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/llama3-chatbot.git
+https://github.com/Asman2010/LLaMA-GPT-3.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd llama3-chatbot
+cd LLaMA-GPT-3
 ```
 
 3. Install the required dependencies:
