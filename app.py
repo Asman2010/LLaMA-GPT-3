@@ -16,7 +16,10 @@ client = Groq(api_key=GROQ_API_KEY)
 
 def render_app():
     # Set up Streamlit app
-    st.set_page_config(page_title="LLaMA GPT - 3", page_icon="🦙", layout="wide")
+    st.set_page_config(
+        page_title="LLaMA GPT - 3",
+        layout="wide"
+    )
 
     st.title("LLaMA GPT - 3")
 
@@ -30,12 +33,11 @@ def render_app():
     st.markdown(custom_css, unsafe_allow_html=True)
 
     # Left sidebar menu
-    st.sidebar.header("LLaMA3 Chatbot")
-
+    st.sidebar.header("LLaMA GPT - 3")
     # Set config for a cleaner menu, footer & background:
     hide_streamlit_style = """
                 <style>
-                #MainMenu {visibility: hidden;}
+                MainMenu {visibility: hidden;}
                 footer {visibility: hidden;}
                 </style>
                 """
@@ -43,7 +45,6 @@ def render_app():
 
     # container for the chat history
     response_container = st.container()
-    # container for the user's text input
     container = st.container()
     # Set up/Initialize Session State variables
     if 'chat_dialogue' not in st.session_state:
@@ -59,15 +60,15 @@ def render_app():
     if 'pre_prompt' not in st.session_state:
         st.session_state['pre_prompt'] = PRE_PROMPT
     if 'selected_model' not in st.session_state:
-        st.session_state['selected_model'] = 'llama3-70b-8192'
+        st.session_state['selected_model'] = 'llama3-8b-8192'
 
     # Model hyperparameters
     st.session_state['temperature'] = st.sidebar.slider('Temperature:', min_value=0.01, max_value=5.0, value=0.1, step=0.01)
     st.session_state['top_p'] = st.sidebar.slider('Top P:', min_value=0.01, max_value=1.0, value=0.9, step=0.01)
     st.session_state['max_seq_len'] = st.sidebar.slider('Max Sequence Length:', min_value=64, max_value=4096, value=2048, step=8)
 
-    model_options = ['llama3-70b-8192', 'llama3-8b-8192']
-    st.session_state['selected_model'] = st.sidebar.selectbox('Select Model:', model_options, index=0)
+    model_options = ["llama3-70b-8192", "llama3-8b-8192"]
+    st.session_state['selected_model'] = st.sidebar.selectbox('Select Model:', model_options, index=1)
 
     NEW_P = st.sidebar.text_area('Prompt before the chat starts. Edit here if desired:', PRE_PROMPT, height=60)
     if NEW_P != PRE_PROMPT and NEW_P != "" and NEW_P != None:
@@ -84,21 +85,13 @@ def render_app():
                                             use_container_width=True,
                                             on_click=clear_history)
 
-    # add links to relevant resources for users to select
-    st.sidebar.write(" ")
-
-    logo1 = 'https://storage.googleapis.com/llama2_release/a16z_logo.png'
-    logo2 = 'https://storage.googleapis.com/llama2_release/Screen%20Shot%202023-07-21%20at%2012.34.05%20PM.png'
-
-    st.sidebar.write(" ")
-
     # Display chat messages from history on app rerun
     for message in st.session_state.chat_dialogue:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
-            
-             # Accept user input
-    if prompt := st.chat_input("Message LLaMA 3x...."):
+
+    # Accept user input
+    if prompt := st.chat_input("Message LLaMA GPT - 3...."):
         # Add user message to chat history
         st.session_state.chat_dialogue.append({"role": "user", "content": prompt})
         # Display user message in chat message container
